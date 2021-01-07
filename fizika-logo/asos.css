@@ -1,0 +1,61 @@
+body {
+    background-color: #222222;
+
+}
+.arena {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    animation: aylanish 25s linear infinite ;
+    
+}
+@keyframes aylanish{
+    from{
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+/* Siz bilan ZaraSOFT bo'ldi */
+
+
+
+
+
+
+
+
+
+.yadro {
+    width: 50px; height: 50px;
+    background-color: #fff;
+    border-radius: 50%;
+    /* markazga joylashtirish uchun */
+    position: absolute;
+    top: 50% ; left: 50%;
+    transform: translate(-50%, -50%);
+}
+/* Bizda 3 ta orbita bor */
+.orbita, .orbita::before, .orbita::after {
+    width: 300px; height: 100px;
+    border: 12px solid #fff;
+    border-radius: 50%;
+/* markazga joylashtirish uchun */
+position: absolute;
+top: 50% ; left: 50%;
+transform: translate(-50%, -50%);
+}
+
+.orbita::before{
+    content: '';
+    transform: translate(-50%, -50%) rotate(-120deg);
+}
+/* xatolik ketibdi -50% dan keyin vergulda =) */
+.orbita::after {
+    content: '';
+    transform: translate(-50%, -50%) rotate(120deg);
+}
+/* Animatsiya kiritamiz */
+
